@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sys
+from knotname_reg import knotname_reg
 
 # 指定文本内容
 # 获取文本内容中从扭结不变量到扭结名称的对应关系
@@ -18,6 +19,7 @@ def slow_dict_reader_raw(content: str) -> dict:
             continue # 跳过文件中的空行或者文件中以井号开头的行
         assert re.match(r"^\[.*\|.*\]$", line) is not None
         lpart, rpart = line[1:-1].split("|", 1) # lpart: 扭结不变量, rpart: 扭结名称
+        rpart = knotname_reg(rpart)             # 做 writhe 修正
         if ans.get(lpart) is None:
             ans[lpart] = []
         if rpart not in ans[lpart]: # 将扭结不变量追加到指定的序列中
