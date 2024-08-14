@@ -23,7 +23,7 @@ def load_module_from_path(path: str, mod_name: str): # 从指定路径导入一�
 # 输入合法的扭结名称
 # 返回正则化后的扭结名称
 def knotname_reg(knot_name: str) -> str:
-    return load_module_from_path(SUBDIR, "main").knotname_reg(knot_name)
+    return load_module_from_path(SUBDIR, "AmphichiralChecker").knotname_reg(knot_name)
 
 
 
