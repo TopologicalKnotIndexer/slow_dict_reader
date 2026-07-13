@@ -4,7 +4,10 @@ from pathlib import Path
 import json
 import sys
 
-from knotname_reg import knotname_reg
+try:
+    from .knotname_reg import knotname_reg
+except ImportError:  # Direct execution from the src directory.
+    from knotname_reg import knotname_reg
 
 
 def slow_dict_reader_raw(content: str) -> dict[str, list[str]]:
