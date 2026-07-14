@@ -65,3 +65,16 @@ python -m unittest discover -s tests -v
 
 No PyPI publication is performed as part of repository maintenance. See
 `LICENSE` for this repository's license.
+
+## Citation
+
+If you use this repository in academic work, please cite it as:
+
+```bibtex
+@software{topologicalknotindexer_slow_dict_reader,
+  author = {{TopologicalKnotIndexer contributors}},
+  title = {{slow\_dict\_reader}},
+  year = {2026},
+  url = {https://github.com/TopologicalKnotIndexer/slow_dict_reader}
+}
+```
